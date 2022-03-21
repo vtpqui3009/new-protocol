@@ -1,0 +1,18 @@
+.nav {
+  z-index: 999;
+  position: absolute;
+}
+.nav-item {
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+.nav-item.active {
+  color: #9a1266;
+  border: 2px solid #9a1266;
+  border-radius: 3px;
+  transform: skew(-6deg);
+}

@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
+
+.header {
+  width: 100%;
+  height: 100vh;
+}
+.background {
+  background-image: url("../../images/bg-header.jpg");
+  width: 100%;
+  height: 100vh;
+  background-position: center bottom;
+  object-fit: cover;
+  background-size: cover;
+  z-index: 0;
+}
+
+.backdrop {
+  z-index: 30;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.logo {
+  position: absolute;
+  top: 0%;
+  left: 52%;
+  bottom: 60%;
+  right: 0;
+  z-index: 40;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.logo span {
+  position: relative;
+  transition: color 256ms;
+  font-weight: 600;
+  animation-name: glow;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.logo span:before {
+  text-shadow: 1px 1px 1px rgba(172, 77, 245), -2px 2px 2px rgba(172, 77, 245),
+    2px -2px 2px rgba(172, 77, 245), -2px -2px 2px rgba(172, 77, 245);
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0;
+  right: 0px;
+}
+@keyframes glow {
+  0%,
+  100% {
+    color: #ae4ef5;
+    filter: hue-rotate(-20deg);
+  }
+  50% {
+    color: #ae4ef5;
+    filter: hue-rotate(40deg);
+  }
+}
+.logo > span:last-child {
+  animation: flicker 6s linear infinite;
+}
+
+@keyframes flicker {
+  0%,
+  20%,
+  35%,
+  85% {
+    color: #ff395a;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ff395a;
+    text-shadow: 0 0 30px rgba(#ff395a, 0.4);
+  }
+  18%,
+  50%,
+  80% {
+    color: white;
+    text-shadow: none;
+    -webkit-text-stroke-width: 0px;
+  }
+
+  12%,
+  22%,
+  100% {
+    color: #161616;
+    -webkit-text-stroke-width: 0px;
+    text-shadow: 0 0 30px rgba(black, 0.4);
+  }
+}
+.content {
+  position: absolute;
+  bottom: 30%;
+  right: 32px;
+  font: size 3reml;
+  color: white;
+  width: 25%;
+}

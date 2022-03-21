@@ -1,0 +1,155 @@
+.ag-spotlight-moving_box {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /* background: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-spotlight-moving/images/bg.jpg) */
+  /* no-repeat scroll 50% 0 #002841; */
+  /* background: url("../images/bg-header.jpg") no-repeat scroll 50% 0 #002841; */
+  background-size: cover;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ag-spotlight-moving_spotlight {
+  bottom: 3.4375em;
+  z-index: -1;
+  width: 6.375em;
+  height: 128.125em;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: #ae4ef5; */
+  filter: hue-rotate(-360deg);
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-animation: an-spotlight-moving-right 10s
+    cubic-bezier(0.6, 0, 0.55, 0.8) infinite;
+  -moz-animation: an-spotlight-moving-right 10s cubic-bezier(0.6, 0, 0.55, 0.8)
+    infinite;
+  -o-animation: an-spotlight-moving-right 10s cubic-bezier(0.6, 0, 0.55, 0.8)
+    infinite;
+  animation: an-spotlight-moving-right 10s cubic-bezier(0.6, 0, 0.55, 0.8)
+    infinite;
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 60% 100%, 40% 100%);
+  clip-path: polygon(0 0, 100% 0, 60% 100%, 40% 100%);
+
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+
+  position: absolute;
+}
+.ag-spotlight-moving_spotlight-right {
+  right: -10.4375em;
+}
+.ag-spotlight-moving_spotlight-left {
+  left: -3.4375em;
+  -webkit-animation-name: an-spotlight-moving-left;
+  -moz-animation-name: an-spotlight-moving-left;
+  -o-animation-name: an-spotlight-moving-left;
+  animation-name: an-spotlight-moving-left;
+}
+
+@-webkit-keyframes an-spotlight-moving-right {
+  0%,
+  100% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-75deg);
+    transform: rotate(-75deg);
+  }
+}
+@-moz-keyframes an-spotlight-moving-right {
+  0%,
+  100% {
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    -moz-transform: rotate(-75deg);
+    transform: rotate(-75deg);
+  }
+}
+@-o-keyframes an-spotlight-moving-right {
+  0%,
+  100% {
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    -o-transform: rotate(-75deg);
+    transform: rotate(-75deg);
+  }
+}
+@keyframes an-spotlight-moving-right {
+  0%,
+  100% {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-75deg);
+    -moz-transform: rotate(-75deg);
+    -o-transform: rotate(-75deg);
+    transform: rotate(-75deg);
+  }
+}
+
+@-webkit-keyframes an-spotlight-moving-left {
+  0%,
+  100% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(75deg);
+    transform: rotate(75deg);
+  }
+}
+@-moz-keyframes an-spotlight-moving-left {
+  0%,
+  100% {
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  50% {
+    -moz-transform: rotate(75deg);
+    transform: rotate(75deg);
+  }
+}
+@-o-keyframes an-spotlight-moving-left {
+  0%,
+  100% {
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  50% {
+    -o-transform: rotate(75deg);
+    transform: rotate(75deg);
+  }
+}
+@keyframes an-spotlight-moving-left {
+  0%,
+  100% {
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(75deg);
+    -moz-transform: rotate(75deg);
+    -o-transform: rotate(75deg);
+    transform: rotate(75deg);
+  }
+}
