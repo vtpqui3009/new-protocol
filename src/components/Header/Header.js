@@ -13,18 +13,33 @@ const Header = () => {
         <img src={WebLogo} alt="" width="100px" height="100px" />
         <Logo />
       </div>
-      <video
-        autoPlay
-        loop
-        muted
+      <div
         style={{
+          position: "absolute",
+          top: 0,
+          // zIndex: -1,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           width: "100%",
-          height: "100vh",
-          // transform: "translateX(-70px)",
+          height: "100%",
+          overflow: "hidden",
+          boxSizing: "border-box",
+          // background: "rgba(0,0,0,.4)",
         }}
       >
-        <source src={Video} type="video/mp4" />
-      </video>
+        <video
+          autoPlay
+          loop
+          muted
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+        >
+          <source src={Video} type="video/mp4" />
+        </video>
+      </div>
     </div>
   );
 };
