@@ -36,14 +36,14 @@
   left: 52%;
   bottom: 60%;
   right: 0;
-  z-index: 40;
-  font-size: 6rem;
+  z-index: 999;
+  /* font-size: 6rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 600; */
   display: flex;
   align-items: center;
 }
-.logo span {
+/* .logo span {
   position: relative;
   transition: color 256ms;
   font-weight: 600;
@@ -75,7 +75,7 @@
 }
 .logo > span:last-child {
   animation: flicker 6s linear infinite;
-}
+} */
 
 @keyframes flicker {
   0%,
