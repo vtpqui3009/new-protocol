@@ -3,6 +3,7 @@ import { Normalize } from "styled-normalize";
 import { darkTheme } from "./Theme/Theme";
 import GlobalStyles from "./Theme/Global";
 import DaftPunk from "./DaftPunk";
+
 const Page = styled.div`
   display: flex;
   flex-direction: column;
