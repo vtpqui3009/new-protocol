@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 .background {
   background-image: url("../../images/bg-header.jpg");
@@ -23,7 +24,7 @@
   z-index: 30;
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -31,9 +32,10 @@
   background: rgba(0, 0, 0, 0.3);
 }
 .logo {
+  overflow: hidden;
   position: absolute;
   top: 0%;
-  left: 52%;
+  left: 62%;
   bottom: 60%;
   right: 0;
   z-index: 999;
@@ -42,6 +44,10 @@
   font-weight: 600; */
   display: flex;
   align-items: center;
+}
+.logo > img {
+  border: 2px solid white;
+  border-radius: 100%;
 }
 /* .logo span {
   position: relative;
