@@ -1,8 +1,23 @@
 import ReactFluidAnimation from "@usertive/react-fluid-animation";
-import "./WhitePaper.css";
+import styled from "styled-components";
+const StyledWhitePaper = styled.div`
+  position: relative;
+  & > p {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    z-index: 0;
+    text-align: center;
+  }
+`;
 const WhitePaper = () => {
   return (
-    <div className="white-paper">
+    <StyledWhitePaper>
       <ReactFluidAnimation style={{ height: "100vh" }} />
       <p>
         Meta Adult is a project on the Ethereum Blockchain platform. The symbol
@@ -10,7 +25,7 @@ const WhitePaper = () => {
         started by the development team based on the Metaverse social context
         which should match the actual needs of people individually.
       </p>
-    </div>
+    </StyledWhitePaper>
   );
 };
 export default WhitePaper;

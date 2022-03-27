@@ -2,7 +2,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
 import { darkTheme } from "./Theme/Theme";
 import GlobalStyles from "./Theme/Global";
-import DaftPunk from "./DaftPunk";
+import MetaAdult from "./MetaAdult";
 
 const Page = styled.div`
   display: flex;
@@ -76,7 +76,7 @@ const Logo = () => {
               delay={Math.floor(Math.random() * 4) + 1}
             />
           ))}
-          <DaftPunk />
+          <MetaAdult />
         </Canvas>
       </Page>
     </ThemeProvider>
