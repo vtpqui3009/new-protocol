@@ -9,7 +9,6 @@ const Header = () => {
   return (
     <div style={{ height: "100vh" }}>
       <div className="header">
-        {/* <div className="backdrop"> </div> */}
         <div className="logo">
           <img src={WebLogo} alt="" width="100px" height="100px" />
           <Logo />
@@ -30,7 +29,8 @@ const Header = () => {
           }}
         >
           <video
-            autoPlay
+            autoPlay="true"
+            muted
             loop
             style={{
               width: "100%",
