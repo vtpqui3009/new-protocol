@@ -7,40 +7,22 @@ import Logo from "./Logo";
 import Video from "./background.mp4";
 const Header = () => {
   return (
-    <div style={{ height: "100vh" }}>
-      <div className="header">
-        <div className="logo">
-          <img src={WebLogo} alt="" width="100px" height="100px" />
-          <Logo />
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            // zIndex: -1,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100%",
-            overflow: "hidden",
-            boxSizing: "border-box",
-            // background: "rgba(0,0,0,.4)",
-          }}
-        >
-          <video
-            autoPlay="true"
-            muted
-            loop
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          >
-            <source src={Video} type="video/mp4" />
-          </video>
-        </div>
+    <div className="header">
+      <div className="logo">
+        <img src={WebLogo} alt="" />
+        <Logo />
       </div>
+      <video
+        autoPlay={true}
+        muted
+        loop
+        style={{
+          width: "100%",
+          height: "auto",
+        }}
+      >
+        <source src={Video} type="video/mp4" />
+      </video>
     </div>
   );
 };

@@ -13,6 +13,9 @@ const StyledWhitePaper = styled.div`
     letter-spacing: 1px;
     z-index: 0;
     text-align: center;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 `;
 const WhitePaper = () => {

@@ -31,6 +31,29 @@ const Style = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  color: white;
+  position: absolute;
+  top: 45%;
+  @media (min-width: 480px) {
+    top: 45%;
+    .st0,
+    .st1 {
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .st0,
+    .st1 {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    top: 40%;
+    .st0,
+    .st1 {
+      font-size: 5rem;
+    }
+  }
   & > #d {
     animation: flicker 6s infinite forwards;
   }
@@ -44,15 +67,47 @@ const Style = styled.div`
 
   .st0 {
     fill: #f065fe;
-    font-style: bold;
+    color: #f065fe;
+    font-weight: bold;
+    ${"" /* font-size: 1rem; */}
+    font-family: "Oleo Script Swash Caps", cursive;
+    letter-spacing: 4px;
   }
   .st1 {
     fill: #3c4ad2;
+    color: #3c4ad2;
+    ${"" /* font-size: 1rem; */}
+    font-weight: bold;
+    font-family: "Oleo Script Swash Caps", cursive;
+    letter-spacing: 4px;
   }
 `;
 
 const DaftPunk = () => (
   <Style>
+    <span className="st0" id="d">
+      M
+    </span>
+    <span className="st0" id="t">
+      e
+    </span>
+    <span className="st0" id="d">
+      t
+    </span>
+    <span className="st0" id="t">
+      a
+    </span>
+    <span className="st1" id="t">
+      A
+    </span>
+    <span className="st1" id="nk">
+      du
+    </span>
+    <span className="st1" id="nk">
+      lt
+    </span>
+  </Style>
+  /* <Style>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
@@ -959,7 +1014,7 @@ const DaftPunk = () => (
 	c0.4-0.1,0.8-0.1,1.1-0.1C75.9,15.4,76.2,15.3,76.6,15.3z"
       />
     </svg>
-  </Style>
+  </Style> */
 );
 
 export default DaftPunk;
