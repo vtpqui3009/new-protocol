@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import WebLogo from "../../images/web-logo.png";
 import "./Header.css";
 // import Navbar from "./Navbar";
@@ -6,6 +6,10 @@ import Logo from "./Logo";
 // import Banner from "../../images/bg-header.jpg";
 import Video from "./background.mp4";
 const Header = () => {
+  const videoRef = useRef(undefined);
+  useEffect(() => {
+    videoRef.current.defaultMuted = true;
+  });
   return (
     <div className="header">
       <div className="logo">
@@ -13,9 +17,11 @@ const Header = () => {
         <Logo />
       </div>
       <video
-        autoPlay={true}
+        autoPlay
         muted
         loop
+        ref={videoRef}
+        playsInline
         style={{
           width: "100%",
           height: "auto",
