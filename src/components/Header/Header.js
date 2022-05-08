@@ -13,13 +13,13 @@ const Header = () => {
         <Logo />
       </div>
       <video
-        loop={true}
-        muted={true}
-        autoPlay={true}
-        playsinline={true}
+        loop
+        muted
+        autoPlay
+        playsInline
         style={{
           width: "100%",
-          height: "auto",
+          height: "100%",
         }}
       >
         <source src={Video} type="video/mp4" />
