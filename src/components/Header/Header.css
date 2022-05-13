@@ -29,6 +29,16 @@
 .header {
   position: relative;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.video-desktop {
+  width: auto;
+  height: 100%;
+}
+.video-mobile {
+  width: 100%;
+  height: 100%;
 }
 .logo {
   overflow: hidden;
