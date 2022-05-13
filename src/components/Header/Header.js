@@ -19,29 +19,7 @@ const Header = () => {
         <img src={WebLogo} alt="" />
         <Logo />
       </div>
-      {/* <div
-        dangerouslySetInnerHTML={{
-          __html: ` <video
-        loop
-        muted
-        autoPlay
-        playsInline
-        style={
-          ${
-            width < 768
-              ? {
-                  width: "100%",
-                  height: "100%",
-                }
-              : { width: "auto" }
-          }
-         }
-      >
-      <source src=${Video} type="video/mp4" />
-      Your browser does not support the video tag.
-</video>`,
-        }}
-      /> */}
+
       <video
         loop
         muted
