@@ -34,9 +34,21 @@ const Header = () => {
           the video tag.
         </video>
       )}
-      {/* {width < 480 && (
+      {width < 480 ? (
         <img alt="" src={BackgroundMobile} className="background-mobile" />
-      )} */}
+      ) : (
+        <video
+          autoPlay={true}
+          loop={true}
+          muted
+          playsInline
+          // defaultmuted="true"
+          className="video-desktop"
+        >
+          <source src={Video} type="video/mp4" /> Your browser does not support
+          the video tag.
+        </video>
+      )}
     </div>
   );
 };
