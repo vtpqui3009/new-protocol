@@ -22,6 +22,7 @@ const Header = () => {
       </div>
       {width > 480 && (
         <video
+          style={{ display: width < 480 ? "none" : "block" }}
           autoPlay={true}
           loop={true}
           muted
