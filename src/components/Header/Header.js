@@ -16,10 +16,12 @@ const Header = () => {
   }, []);
   return (
     <div className="header">
-      <div className="logo">
-        <img src={WebLogo} alt="" />
-        <Logo />
-      </div>
+      {width > 480 && (
+        <div className="logo">
+          <img src={WebLogo} alt="" />
+          <Logo />
+        </div>
+      )}
       {width > 480 && (
         <video
           style={{ display: width < 480 ? "none" : "block" }}
