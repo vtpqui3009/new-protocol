@@ -20,23 +20,23 @@ const Header = () => {
         <img src={WebLogo} alt="" />
         <Logo />
       </div>
-      {width > 480 && (
-        <video
-          style={{ display: width < 480 ? "none" : "block" }}
-          autoPlay={true}
-          loop={true}
-          muted
-          playsInline
-          // defaultmuted="true"
-          className="video-desktop"
-        >
-          <source src={Video} type="video/mp4" /> Your browser does not support
-          the video tag.
-        </video>
-      )}
-      {width < 480 && (
+      {/* {width > 480 && ( */}
+      <video
+        // style={{ display: width < 480 ? "none" : "block" }}
+        autoPlay={true}
+        loop={true}
+        muted
+        playsInline
+        // defaultmuted="true"
+        className="video-desktop"
+      >
+        <source src={Video} type="video/mp4" /> Your browser does not support
+        the video tag.
+      </video>
+      {/* )} */}
+      {/* {width < 480 && (
         <img alt="" src={BackgroundMobile} className="background-mobile" />
-      )}
+      )} */}
     </div>
   );
 };
