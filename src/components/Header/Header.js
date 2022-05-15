@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import WebLogo from "../../images/web-logo.png";
 import "./Header.css";
 import Logo from "./Logo";
+import BackgroundMobile from "./background-mobile.png";
 import Video from "./background.mp4";
 const Header = () => {
   const [width, setWidth] = useState(undefined);
@@ -9,7 +10,7 @@ const Header = () => {
     const handleResize = () => {
       setWidth(window.innerWidth);
     };
-    // handleResize()
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -19,19 +20,22 @@ const Header = () => {
         <img src={WebLogo} alt="" />
         <Logo />
       </div>
-
-      <video
-        autoPlay={true}
-        loop={true}
-        controls={false}
-        muted
-        playsInline
-        defaultMuted
-        className={width < 768 ? "video-mobile" : "video-desktop"}
-      >
-        <source src="./background.mp4" type="video/mp4" /> Your browser does not
-        support the video tag.
-      </video>
+      {width > 480 && (
+        <video
+          autoPlay={true}
+          loop={true}
+          muted
+          playsInline
+          // defaultmuted="true"
+          className="video-desktop"
+        >
+          <source src={Video} type="video/mp4" /> Your browser does not support
+          the video tag.
+        </video>
+      )}
+      {width < 480 && (
+        <img alt="" src={BackgroundMobile} className="background-mobile" />
+      )}
     </div>
   );
 };
